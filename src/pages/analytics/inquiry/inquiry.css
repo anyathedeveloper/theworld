@@ -1,0 +1,21 @@
+@import url(./__title/inquiry__title.css);
+@import url(./__news/inquiry__news.css);
+@import url(./__references/inquiry__references.css);
+
+.inquiry {
+    padding: 40px 100px 80px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .inquiry {
+        padding: 20px 40px 40px 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .inquiry {
+        padding: 10px 16px 24px 16px;
+    }
+}

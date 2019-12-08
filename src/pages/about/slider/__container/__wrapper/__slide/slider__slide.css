@@ -1,0 +1,11 @@
+@import url(./slide__date/slide__date.css);
+@import url(./slide__info-block/slide__info-block.css);
+@import url(./slide__text/slide__text.css);
+
+.slider__slide {
+    max-width: 400px;
+    background-color: #FFFFFF;
+    margin-right: 15px;
+    border-radius: 16px;
+    height: auto !important;
+}

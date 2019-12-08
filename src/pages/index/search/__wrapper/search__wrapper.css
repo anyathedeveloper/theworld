@@ -1,0 +1,25 @@
+@import url(./__title/search__title.css);
+@import url(./__subtitle/search__subtitle.css);
+@import url(./__searchbar/search__searchbar.css);
+
+.search__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 80px auto;
+}
+
+@media (max-width: 1000px) {
+    .search__wrapper {
+        max-width: 450px;
+        padding: 0 40px;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .search__wrapper {
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+}

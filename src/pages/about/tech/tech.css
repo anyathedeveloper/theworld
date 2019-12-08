@@ -1,0 +1,7 @@
+@import url(./__wrapper/tech__wrapper.css);
+@import url(./__title/tech__title.css);
+
+.tech {
+    background-color: #F5F6F7;
+}
+

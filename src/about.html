@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News analyzing platform for Yandex Praktikum">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Anna Fokova">
+    <title>О проекте / NewsAnalyzer</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu menu_black">
+            <a class="menu__logo menu__logo_black" href="/index.html">NewsAnalyzer</a>
+            <div class="menu__links">
+                <a class="menu__link menu__link_black menu__link_main" href="/index.html">Главная</a>
+                <a class="menu__link menu__link_black menu__link_about menu__link_active menu__link_active_black" href="/about.html">О проекте</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="clients">
+        <h2 class="clients__title">
+            Клиентам
+        </h2>
+        <p class="clients__text common-text">
+            Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+        <p class="clients__text common-text">
+            Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+        <p class="clients__text common-text">
+            Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+        <p class="clients__text common-text">
+            При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
+        <p class="clients__text common-text">
+            Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+        </p>
+    </section>
+
+    <section class="tech">
+        <div class="tech__wrapper">
+            <h2 class="tech__title">Используемые технологии</h2>
+            <div class="tech__items">
+                <div class="tech__item">
+                    <p class="item__title">HTML</p>
+                    <img class="item__pic" src="<%=require('./pages/about/tech/images/HTML.png').default%>" alt="HTML5 иконка">
+                </div>
+                <div class="tech__item">
+                    <p class="item__title">CSS</p>
+                    <img class="item__pic" src="<%=require('./pages/about/tech/images/CSS.png').default%>" alt="CSS3 иконка">
+                </div>
+                <div class="tech__item">
+                    <p class="item__title">Java Script</p>
+                    <img class="item__pic" src="<%=require('./pages/about/tech/images/JS.png').default%>" alt="JS иконка">
+                </div>
+                <div class="tech__item">
+                    <p class="item__title">Webpack</p>
+                    <img class="item__pic" src="<%=require('./pages/about/tech/images/webpack.png').default%>" alt="Webpack иконка">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <img class="about__photo" src="<%=require('./pages/about/about/images/photo.png').default%>">
+        <div class="about__description">
+            <h2 class="about__title">
+                Об авторе
+            </h2>
+            <p class="about__text common-text">
+                Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+            </p>
+            <p class="about__text common-text">
+                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="slider__title-block">
+            <h2 class="slider__title">
+                История коммитов из GitHub
+            </h2>
+            <a href="#" class="slider__link">
+                Открыть в Github &#62;
+            </a>
+        </div>
+        <div class="slider__container swiper-container">
+            <div class="slider__wrapper swiper-wrapper">
+                <div class="slider__slide swiper-slide h-100">
+                    <p class="slide__date">
+                        14 августа, 2019
+                    </p>
+                    <div class="slide__info-block">
+                        <div class="info-block__icon"></div>
+                        <div class="info-block__info">
+                            <h4 class="info-block__name">
+                                Антон Долинин
+                            </h4>
+                            <p class="info-block__email">
+                                anton@yandex.ru
+                            </p>
+                        </div>
+                    </div>
+                    <p class="slide__text">
+                        Emmet (formerly Zen Coding) is a web-
+                        developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                    </p>
+                </div>
+                <div class="slider__slide swiper-slide h-100">
+                    <p class="slide__date">
+                        14 августа, 2019
+                    </p>
+                    <div class="slide__info-block">
+                        <div class="info-block__icon"></div>
+                        <div class="info-block__info">
+                            <h4 class="info-block__name">
+                                Антон Долинин
+                            </h4>
+                            <p class="info-block__email">
+                                anton@yandex.ru
+                            </p>
+                        </div>
+                    </div>
+                    <p class="slide__text">
+                        Emmet (formerly Zen Coding) is a web-
+                        developer’s toolkit that can greatly improve your HTML & CSS workflow.
+                    </p>
+                </div>
+                <div class="slider__slide swiper-slide h-100">
+                    <p class="slide__date">
+                        14 августа, 2019
+                    </p>
+                    <div class="slide__info-block">
+                        <div class="info-block__icon"></div>
+                        <div class="info-block__info">
+                            <h4 class="info-block__name">
+                                Антон Долинин
+                            </h4>
+                            <p class="info-block__email">
+                                anton@yandex.ru
+                            </p>
+                        </div>
+                    </div>
+                    <p class="slide__text">
+                        You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools >
+                        Plugins > Available plugins and find and install Emmet plugin.
+                    </p>
+                </div>
+                <div class="slider__slide swiper-slide h-100">
+                    <p class="slide__date">
+                        14 августа, 2019
+                    </p>
+                    <div class="slide__info-block">
+                        <div class="info-block__icon"></div>
+                        <div class="info-block__info">
+                            <h4 class="info-block__name">
+                                Антон Долинин
+                            </h4>
+                            <p class="info-block__email">
+                                anton@yandex.ru
+                            </p>
+                        </div>
+                    </div>
+                    <p class="slide__text">
+                        You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools >
+                        Plugins > Available plugins and find and install Emmet plugin. Текст для этого слайдера сделан более длинным, чтобы протестировать свойство автоматического увеличения высоты всех слайдеров по самому высокому.
+                    </p>
+                </div>
+            </div>
+            <div class="slider__pagination swiper-pagination"></div>
+            <div class="slider__button slider__button_button-prev swiper-button-prev"></div>
+            <div class="slider__button slider__button_button-next swiper-button-next"></div>
+        </div>
+        <button src="#" class="slider__git-button">Открыть в Github</button>
+    </section>
+
+    <footer>
+        <p class="footer__copyright">&#169; 2019 Supersite</p>
+        <div class="footer__menu">
+            <a class="footer__link footer__link_main" href="/index.html">Главная</a>
+            <a class="footer__link footer__link_about" href="/about.html">О проекте</a>
+            <a class="footer__link footer__link_yandex" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a>
+        </div>
+        <div class="footer__icons">
+            <a href="https://github.com/anyathedeveloper" target="_blank"><img class="footer__icon footer__icons_git" src="<%=require('./pages/index/footer/images/github.png').default%>" alt="иконка гитхаба"></a>
+            <a href="https://www.facebook.com/lije.baley.3" target="_blank"><img class="footer__icon footer__icons_facebook" src="<%=require('./pages/index/footer/images/fb.png').default%>" alt="иконка фейсбука"></a>
+        </div>
+    </footer>
+
+    <script src="../node_modules/swiper/js/swiper.min.js"></script>
+    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+
+</body>

@@ -1,0 +1,9 @@
+@import url(./__item/tech__item.css);
+
+.tech__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 20px;
+    width: 700px;
+    margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+@import url(./__item/grid-table__item.css);
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 30px;
+    grid-row-gap: 50px;
+}
+
+@media (max-width: 400px) {
+    .grid-table {
+        grid-template-columns: 65px auto;
+        grid-row-gap: 25px;
+    }
+}

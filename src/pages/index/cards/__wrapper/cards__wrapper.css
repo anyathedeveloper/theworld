@@ -1,0 +1,21 @@
+@import url(./__title-block/cards__title-block.css);
+@import url(./__button-wrapper/cards__button-wrapper.css);
+@import url(./__container/cards__container.css);
+
+.cards__wrapper {
+    padding: 80px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .cards__wrapper {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cards__wrapper {
+        padding: 30px 16px;
+    }
+}

@@ -1,0 +1,14 @@
+.card-item__source {
+    color: #B6BCBF;
+    font-family: Roboto Slab;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 0 24px 24px 24px;
+}
+
+@media (max-width: 1000px) {
+    .card-item__source {
+        padding: 0 16px 24px 16px;
+    }
+}

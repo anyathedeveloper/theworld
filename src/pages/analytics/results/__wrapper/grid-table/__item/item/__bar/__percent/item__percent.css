@@ -1,0 +1,14 @@
+@import url(./item__percent_one/item__percent_one.css);
+@import url(./item__percent_two/item__percent_two.css);
+@import url(./item__percent_three/item__percent_three.css);
+@import url(./item__percent_four/item__percent_four.css);
+@import url(./item__percent_five/item__percent_five.css);
+@import url(./item__percent_six/item__percent_six.css);
+@import url(./item__percent_seven/item__percent_seven.css);
+
+.item__percent {
+    font-size: 12px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding-left: 5px;
+}

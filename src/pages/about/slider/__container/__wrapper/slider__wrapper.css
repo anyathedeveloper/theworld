@@ -1,0 +1,6 @@
+@import url(./__slide/slider__slide.css);
+
+.slider__wrapper {
+    padding-bottom: 50px;
+    background-color: #F5F6F7;
+}

@@ -1,0 +1,13 @@
+@import url(./menu__logo_black/menu__logo_black.css);
+
+.menu__logo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    .menu__logo {
+        font-size: 16px;
+    }
+}

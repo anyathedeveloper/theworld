@@ -1,0 +1,31 @@
+@import url(./__copyright/footer__copyright.css);
+@import url(./__icons/footer__icons.css);
+@import url(./__menu/footer__menu.css);
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    footer {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        padding: 20px 16px;
+    }
+}

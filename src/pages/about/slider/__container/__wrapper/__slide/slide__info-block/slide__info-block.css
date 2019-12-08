@@ -1,0 +1,8 @@
+@import url(./__info/info-block__info.css);
+@import url(./__icon/info-block__icon.css);
+
+.slide__info-block {
+    padding: 15px 15px 15px 24px;
+    display: flex;
+    align-items: center;
+}

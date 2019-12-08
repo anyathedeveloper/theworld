@@ -1,0 +1,19 @@
+.about__text {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.about__text:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+    .about__text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .about__text:not(:last-child) {
+        margin-bottom: 0;
+    }
+}

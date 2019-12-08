@@ -1,0 +1,19 @@
+@import url(./__link/breadcrumbs__link.css);
+
+.breadcrumbs {
+    padding: 40px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .breadcrumbs {
+        padding: 32px 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .breadcrumbs {
+        display: none;
+    }
+}

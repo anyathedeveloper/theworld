@@ -1,0 +1,28 @@
+@import url(./__items/tech__items.css);
+
+.tech__wrapper {
+    padding: 80px 100px;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .tech__wrapper {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .tech__wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .tech__wrapper {
+        padding: 30px 16px;
+    }
+}

@@ -1,0 +1,18 @@
+@import url(./__wrapper/slider__wrapper.css);
+
+.slider__container {
+    padding: 0 100px;
+    max-width: 1440px;
+}
+
+@media (max-width: 1000px) {
+    .slider__container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .slider__container {
+        padding: 0 16px;
+    }
+}

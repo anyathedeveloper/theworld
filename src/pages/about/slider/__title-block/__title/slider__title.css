@@ -1,0 +1,9 @@
+.slider__title {
+    margin-right: 20px;
+}
+
+@media (max-width: 1000px) {
+    .slider__title {
+        max-width: 330px;
+    }
+}

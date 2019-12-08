@@ -1,0 +1,20 @@
+@import url(./__link/footer__link.css);
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+    .footer__menu {
+        flex-direction: column;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__menu {
+        order: 1;
+    }
+}

@@ -1,0 +1,14 @@
+@import url(./__title/card-item__title.css);
+@import url(./__text/card-item__text.css);
+@import url(./__source/card-item__source.css);
+@import url(./__pic/card-item__pic.css);
+@import url(./__date/card-item__date.css);
+
+.card-item {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

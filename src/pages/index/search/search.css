@@ -1,0 +1,25 @@
+@import url(./__wrapper/search__wrapper.css);
+
+.search {
+    height: 580px;
+    background: url('./images/search.png') center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1000px) {
+    .search {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search {
+        height: 540px;
+    }
+}
