@@ -56,19 +56,19 @@ module.exports = {
             inject: false,
             template: 'src/index.html',
             filename: 'index.html',
-            favicon: 'src/images/favicon.png'
+            favicon: './src/images/favicon.png'
         }),
             new HtmlWebpackPlugin({
             inject: false,
             template: 'src/about.html',
             filename: 'about.html',
-            favicon: 'src/images/favicon.png'
+            favicon: './src/images/favicon.png'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: 'src/analytics.html',
             filename: 'analytics.html',
-            favicon: 'src/images/favicon.png'
+            favicon: './src/images/favicon.png'
         }),
 
     new OptimizeCssAssetsPlugin({
