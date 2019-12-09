@@ -4,11 +4,11 @@ import Swiper from 'swiper';
 
 var mySwiper = new Swiper('.swiper-container', {
     'direction': 'horizontal',
-    loop: true,
     slidesPerView: 'auto',
-    centeredSlides: 'true',
     spaceBetween: 16,
-    slidesPerGroup: 1,
+    fadeEffect: {
+        crossFade: 'true'
+    },
     pagination: {
         el: '.swiper-pagination',
     },
