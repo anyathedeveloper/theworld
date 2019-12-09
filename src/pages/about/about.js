@@ -1,4 +1,5 @@
 import "./about.css";
+import '../../images/favicon.png';
 import Swiper from 'swiper';
 
 var mySwiper = new Swiper('.swiper-container', {

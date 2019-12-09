@@ -30,7 +30,7 @@ module.exports = {
                 use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|ico)$/i,
                 use: [
                   'file-loader',
                     {
@@ -56,19 +56,19 @@ module.exports = {
             inject: false,
             template: 'src/index.html',
             filename: 'index.html',
-            favicon: 'src/images/favicon.png'
+            favicon: 'src/images/favicon.ico'
         }),
             new HtmlWebpackPlugin({
             inject: false,
             template: 'src/about.html',
             filename: 'about.html',
-            favicon: 'src/images/favicon.png'
+            favicon: 'src/images/favicon.ico'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: 'src/analytics.html',
             filename: 'analytics.html',
-            favicon: 'src/images/favicon.png'
+            favicon: 'src/images/favicon.ico'
         }),
 
     new OptimizeCssAssetsPlugin({
