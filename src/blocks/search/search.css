@@ -2,7 +2,7 @@
 
 .search {
     height: 580px;
-    background: url('./images/search.png') center no-repeat;
+    background: url('images/search.png') center no-repeat;
     background-size: cover;
 }
 
