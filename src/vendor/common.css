@@ -39,27 +39,6 @@ h2 {
     }
 }
 
-.common-text {
-    font-size: 18px;
-    line-height: 24px;
-}
-
-.common-text:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-@media (max-width: 400px) {
-    .common-text {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .common-text:not(:last-child) {
-        margin-bottom: 10px;
-    }
-}
-
-
 a {
     text-decoration: none;
     color: #1A1B22;

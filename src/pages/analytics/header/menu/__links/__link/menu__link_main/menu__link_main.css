@@ -1,9 +1,0 @@
-.menu__link_main {
-    margin-right: 20px;
-}
-
-@media (max-width: 400px) {
-    .menu__link_main {
-        margin-right: 10px;
-    }
-}

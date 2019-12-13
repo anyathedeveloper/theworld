@@ -18,5 +18,5 @@
     font-family: 'Roboto Slab', serif;
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/RobotoSlab-Regular.ttf') format('ttf');
+    src: url('./fonts/RobotoSlab-Regular.woff') format('woff');
 }

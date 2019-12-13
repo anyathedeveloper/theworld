@@ -1,7 +1,0 @@
-@import url(./__title/item__title.css);
-@import url(./__pic/item__pic.css);
-
-.tech__item {
-    max-width: 120px;
-    margin: 0 auto;
-}

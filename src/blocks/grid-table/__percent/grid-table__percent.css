@@ -1,0 +1,14 @@
+@import url(./grid-table__percent_one/grid-table__percent_one.css);
+@import url(./grid-table__percent_two/grid-table__percent_two.css);
+@import url(./grid-table__percent_three/grid-table__percent_three.css);
+@import url(./grid-table__percent_five/grid-table__percent_five.css);
+@import url(./grid-table__percent_six/grid-table__percent_six.css);
+@import url(./grid-table__percent_seven/grid-table__percent_seven.css);
+@import url(./grid-table__percent_four/grid-table__percent_four.css);
+
+.grid-table__percent {
+    font-size: 12px;
+    line-height: 25px;
+    color: #FFFFFF;
+    padding-left: 5px;
+}

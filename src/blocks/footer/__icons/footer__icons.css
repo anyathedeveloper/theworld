@@ -1,0 +1,6 @@
+@media (max-width: 600px) {
+    .footer__icons {
+        order: 2;
+        padding-right: 20px;
+    }
+}

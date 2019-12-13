@@ -1,0 +1,15 @@
+@import url(./grid-table__bar_one/item__bar_one.css);
+@import url(./grid-table__bar_two/item__bar_two.css);
+@import url(./grid-table__bar_three/item__bar_three.css);
+@import url(./grid-table__bar_four/item__bar_four.css);
+@import url(./grid-table__bar_five/item__bar_five.css);
+@import url(./grid-table__bar_six/item__bar_six.css);
+@import url(./grid-table__bar_seven/item__bar_seven.css);
+
+.grid-table__bar {
+    background-color: #2F71E5;
+}
+
+.grid-table__bar:hover {
+    opacity: 0.8;
+}

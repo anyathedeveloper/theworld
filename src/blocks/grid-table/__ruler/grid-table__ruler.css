@@ -1,0 +1,16 @@
+.grid-table__ruler {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    margin: -20px 0;
+}
+
+@media (max-width: 400px) {
+    .grid-table__ruler span {
+        display: none;
+    }
+}

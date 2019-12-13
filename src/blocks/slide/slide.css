@@ -1,0 +1,14 @@
+@import url(./__date/slide__date.css);
+@import url(./__info-block/slide__info-block.css);
+@import url(./__text/slide__text.css);
+@import url(./__name/slide__name.css);
+@import url(./__icon/slide__icon.css);
+@import url(./__email/slide__email.css);
+
+.slide {
+    max-width: 400px;
+    background-color: #FFFFFF;
+    margin-right: 15px;
+    border-radius: 16px;
+    height: auto !important;
+}

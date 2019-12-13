@@ -9,13 +9,13 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
-        index: './src/pages/index/index.js',
-        about: './src/pages/about/about.js',
-        analytics: './src/pages/analytics/analytics.js',
+        index: './src/script/index.js',
+        about: './src/script/about.js',
+        analytics: './src/script/analytics.js',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './script/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -32,7 +32,7 @@ module.exports = {
             {
                 test: /\.(gif|png|jpe?g|svg|ico)$/i,
                 use: [
-                  'file-loader',
+                  'file-loader?name=./img/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -44,13 +44,13 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./fonts/[name].[ext]'
             }
         ]
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: './styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
