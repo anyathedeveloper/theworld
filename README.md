@@ -23,4 +23,4 @@
 
 ## Как открыть проект в интернете
 
-[Ссылка на страницу на GH-pages](https://anyathedeveloper.github.io/theworld/)
+[Ссылка на страницу на GH-pages](https://anyathedeveloper.github.io/theworld/index.html)
