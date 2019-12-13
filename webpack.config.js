@@ -30,7 +30,11 @@ module.exports = {
                 use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
             },
             {
-                test: /\.(gif|png|jpe?g|svg|ico)$/i,
+                test: /\.png$/,
+                loader: "url-loader?limit=50000&name=./img/[name].[ext]"
+            },
+            {
+                test: /\.(gif|jpe?g|svg|ico)$/i,
                 use: [
                   'file-loader?name=./img/[name].[ext]',
                     {
