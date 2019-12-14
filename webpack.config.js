@@ -38,8 +38,7 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                             disable: true,
-                            outputPath: '../img/',
-                            publicPath: 'img/'
+                            outputPath: 'img/'
                         },
                   },
                 ],
@@ -53,7 +52,7 @@ module.exports = {
     plugins: [
             new MiniCssExtractPlugin({
             filename: 'styles/style.[contenthash].css',
-            publicPath: '/'
+            publicPath: '../'
         }),
         new HtmlWebpackPlugin({
             inject: false,
