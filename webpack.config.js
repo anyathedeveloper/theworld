@@ -15,7 +15,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './script/[name].[chunkhash].js'
+        filename: 'script/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -31,12 +31,12 @@ module.exports = {
             },
             {
                 test: /\.png$/,
-                loader: "url-loader?limit=50000&name=./img/[name].[ext]"
+                loader: "url-loader?limit=50000&name=img/[name].[ext]"
             },
             {
                 test: /\.(gif|jpe?g|svg|ico)$/i,
                 use: [
-                  'file-loader?name=./img/[name].[ext]',
+                  'file-loader?name=img/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -48,13 +48,13 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./fonts/[name].[ext]'
+                loader: 'file-loader?name=fonts/[name].[ext]'
             }
         ]
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: './styles/style.[contenthash].css'
+            filename: 'styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
