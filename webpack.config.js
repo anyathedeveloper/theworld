@@ -38,6 +38,8 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                             disable: true,
+                            publicPath: '../',
+                            useRelativePaths: true
                         },
                   },
                 ],
