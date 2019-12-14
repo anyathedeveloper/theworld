@@ -38,8 +38,8 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                             disable: true,
-                            outputPath: 'img/',
-                            publicPath: '../img/'
+                            outputPath: '../img/',
+                            publicPath: 'img/'
                         },
                   },
                 ],
