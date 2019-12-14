@@ -38,7 +38,7 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                             disable: true,
-                            outputPath: 'img/'
+                            publicPath: path.resolve('dist', 'img')
                         },
                   },
                 ],
