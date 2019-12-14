@@ -27,10 +27,21 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                            hmr: process.env.NODE_ENV === 'development',
+                        },
+          },
+          'css-loader',
+        'postcss-loader',
+        ],
             },
+
             {
-                test: /\.(gif|jpe?g|svg|png|ico)$/i,
+                test: /\.(gif|png|jpe?g|svg|ico)$/i,
                 use: [
                   'file-loader?name=img/[name].[ext]',
                     {
@@ -38,21 +49,20 @@ module.exports = {
                         options: {
                             bypassOnDebug: true,
                             disable: true,
-                            publicPath: path.resolve('dist', 'img')
                         },
                   },
                 ],
+
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=fonts/[name].[ext]'
             }
-        ]
+            ]
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: 'styles/style.[contenthash].css',
-            publicPath: '../'
+            filename: 'styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
