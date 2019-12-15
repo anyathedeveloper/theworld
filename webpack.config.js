@@ -15,7 +15,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'assets/script/[name].[chunkhash].js',
+        filename: 'script/[name].[chunkhash].js',
         publicPath: '/'
     },
     module: {
@@ -32,7 +32,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '../../',
+                            publicPath: '../',
                             hmr: process.env.NODE_ENV === 'development',
                         },
           },
@@ -69,7 +69,7 @@ module.exports = {
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: 'assets/styles/style.[contenthash].css'
+            filename: 'styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
