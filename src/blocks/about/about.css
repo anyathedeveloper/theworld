@@ -1,5 +1,7 @@
 @import url(./__photo/about__photo.css);
 @import url(./__description/about__description.css);
+@import url(./__text/about__text.css);
+@import url(./__title/about__title.css);
 
 .about {
     display: flex;

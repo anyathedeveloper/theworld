@@ -1,7 +1,3 @@
-@import url(./__title/search__title.css);
-@import url(./__subtitle/search__subtitle.css);
-@import url(./__searchbar/search__searchbar.css);
-
 .search__wrapper {
     display: flex;
     flex-direction: column;
