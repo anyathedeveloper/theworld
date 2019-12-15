@@ -15,8 +15,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './script/[name].[chunkhash].js',
-        publicPath: '/'
+        filename: 'script/[name].[chunkhash].js',
     },
     module: {
         rules: [{
@@ -43,7 +42,7 @@ module.exports = {
             {
                 test: /\.(gif|png|jpe?g|svg|ico)$/i,
                 use: [
-                  'file-loader?name=./img/[name].[ext]',
+                  'file-loader?name=img/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {
@@ -59,7 +58,7 @@ module.exports = {
                 use: {
                     loader: "file-loader",
                     options: {
-                        name: "./fonts/[name].[ext]",
+                        name: "fonts/[name].[ext]",
                     },
                 },
 },
@@ -68,7 +67,7 @@ module.exports = {
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: './styles/style.[contenthash].css'
+            filename: 'styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
