@@ -2,6 +2,7 @@
 @import url(./menu__link_about/menu__link_about.css);
 @import url(./menu__link_active/menu__link_active.css);
 @import url(./menu__link_black/menu__link_black.css);
+@import url(./menu__link_white/menu__link_white.css);
 
 .menu__link {
     padding: 27px 0;
