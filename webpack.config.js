@@ -33,7 +33,6 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             publicPath: '../',
-                            hmr: process.env.NODE_ENV === 'development',
                         },
           },
           'css-loader',
@@ -70,7 +69,6 @@ module.exports = {
     plugins: [
             new MiniCssExtractPlugin({
             filename: 'styles/style.[contenthash].css'
-            /* версия без assets/ проверка актуальности загруженной версии */
         }),
         new HtmlWebpackPlugin({
             inject: false,

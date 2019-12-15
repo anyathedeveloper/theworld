@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     src:
         url("./roboto-regular-webfont.woff") format("woff"),
         url("./Roboto-Regular.ttf") format("truetype");
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
     src:
         url("./roboto-medium-webfont.woff") format("woff"),
         url("./Roboto-Medium.ttf") format("truetype");
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab';
     src:
         url("./robotoslab-regular-webfont.woff") format("woff"),
         url("./RobotoSlab-Regular.ttf") format("truetype");
