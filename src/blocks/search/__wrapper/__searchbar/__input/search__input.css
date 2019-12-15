@@ -36,10 +36,6 @@
     }
 }
 
-.search__input:valid:not(:placeholder-shown) {
-    border-color: #ffdb4d;
-}
-
 .search__input:invalid:not(:placeholder-shown),
 .search__input:invalid:required {
     border-color: #df4b41;

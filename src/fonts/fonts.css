@@ -1,0 +1,29 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); */
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src:
+        url("./roboto-regular-webfont.woff") format("woff"),
+        url("./Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src:
+        url("./roboto-medium-webfont.woff") format("woff"),
+        url("./Roboto-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto Slab', serif;
+    src:
+        url("./robotoslab-regular-webfont.woff") format("woff"),
+        url("./RobotoSlab-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}

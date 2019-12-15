@@ -15,7 +15,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'script/[name].[chunkhash].js'
+        filename: 'assets/script/[name].[chunkhash].js',
+        publicPath: '/'
     },
     module: {
         rules: [{
@@ -31,7 +32,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: '../',
+                            publicPath: '../../',
                             hmr: process.env.NODE_ENV === 'development',
                         },
           },
@@ -55,14 +56,20 @@ module.exports = {
 
             },
             {
-                test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=fonts/[name].[ext]'
-            }
-            ]
+                test: /\.(ttf|eot|woff|woff2)$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "fonts/[name].[ext]",
+                    },
+                },
+},
+
+        ]
     },
     plugins: [
             new MiniCssExtractPlugin({
-            filename: 'styles/style.[contenthash].css'
+            filename: 'assets/styles/style.[contenthash].css'
         }),
         new HtmlWebpackPlugin({
             inject: false,
