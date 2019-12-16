@@ -1,0 +1,27 @@
+.about__description {
+    margin-top: 50px;
+}
+
+@media (max-width: 1440px) {
+    .about__description {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__description {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about__description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .about__description {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News analyzing platform for Yandex Praktikum">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Anna Fokova">
+    <title>NewsAnalyzer</title>
+    <link rel="shortcut icon" href="<%=require('./images/favicon.ico').default%>" type="image/ico">
+    <link rel="stylesheet" type="text/css" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
+</head>
+
+<body>
+
+    <section class="search">
+
+        <header>
+
+            <nav class="menu">
+                <a class="menu__logo menu__logo_white" href="index.html">NewsAnalyzer</a>
+                <div class="menu__links">
+                    <a class="menu__link menu__link_main menu__link_active menu__link_active_white" href="index.html">Главная</a>
+                    <a class="menu__link menu__link_about menu__link_white" href="about.html">О проекте</a>
+                </div>
+            </nav>
+
+        </header>
+
+        <div class="search__wrapper">
+            <h1 class="search__title">
+                Что в мире творится?
+            </h1>
+            <p class="search__subtitle">
+                Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+            </p>
+            <div class="search__searchbar">
+                <input class="search__input" type="text" placeholder="Введите тему новости" required>
+                <p class="search__error">Нужно ввести ключевое слово</p>
+                <button class="search__button">Искать</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="preloader">
+        <i class="preloader__circle-preloader"></i>
+        <div class="preloader__text">Идёт поиск новостей...</div>
+    </section>
+
+    <section class="nothingfound">
+        <img src="<%=require('./blocks/nothingfound/images/not-found.png').default%>" alt="грустная рожица" class="nothingfound__pic">
+        <h4 class="nothingfound__title">
+            Ничего не найдено
+        </h4>
+        <p class="nothingfound__text">
+            К сожалению, по вашему запросу
+            ничего не найдено.
+        </p>
+    </section>
+
+    <section class="cards">
+        <div class="cards__wrapper">
+            <div class="cards__title-block">
+                <h2 class="cards__title">
+                    Результаты поиска
+                </h2>
+                <a href="analytics.html" class="cards__link">
+                    Посмотреть аналитику &#62;
+                </a>
+            </div>
+            <div class="cards__container">
+
+                <div class="card-item">
+                    <img class="card-item__pic" src="<%=require('./blocks/cards/images/image_1.png').default%>" alt="иллюстрация к новости">
+                    <p class="card-item__date">
+                        2 августа, 2019
+                    </p>
+                    <a href="#" class="card-item__title">
+                        Национальное достояние – парки
+                    </a>
+                    <p class="card-item__text">
+                        В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                    </p>
+                    <a href="#" class="card-item__source">
+                        РИА
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <img class="card-item__pic" src="<%=require('./blocks/cards/images/image_2.png').default%>" alt="иллюстрация к новости">
+                    <p class="card-item__date">
+                        3 августа, 2019
+                    </p>
+                    <a href="#" class="card-item__title">
+                        Лесные огоньки: история одной фотографии
+                    </a>
+                    <p class="card-item__text">
+                        Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                        из местных чудес природы.
+                    </p>
+                    <a href="#" class="card-item__source">
+                        Лента.ру
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <img class="card-item__pic" src="<%=require('./blocks/cards/images/image_3.png').default%>" alt="иллюстрация к новости">
+                    <p class="card-item__date">
+                        4 августа, 2019
+                    </p>
+                    <a href="#" class="card-item__title">
+                        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                    </a>
+                    <p class="card-item__text">
+                        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+                    </p>
+                    <a href="#" class="card-item__source">
+                        Медуза
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <img class="card-item__pic" src="<%=require('./blocks/cards/images/image_3.png').default%>" alt="иллюстрация к новости">
+                    <p class="card-item__date">
+                        4 августа, 2019
+                    </p>
+                    <a href="#" class="card-item__title">
+                        «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                    </a>
+                    <p class="card-item__text">
+                        Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+                    </p>
+                    <a href="#" class="card-item__source">
+                        Медуза
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="cards__button-wrapper">
+                <button class="cards__more">Показать ещё</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <img class="about__photo" src="<%=require('./blocks/about/images/photo.png').default%>" alt="фото автора проекта">
+        <div class="about__description">
+            <h2 class="about__title">
+                Об авторе
+            </h2>
+            <p class="about__text common-text">
+                Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+            </p>
+            <p class="about__text common-text">
+                Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p class="footer__copyright">&#169; 2019 Supersite</p>
+        <div class="footer__menu">
+            <a class="footer__link footer__link_main" href="index.html">Главная</a>
+            <a class="footer__link footer__link_about" href="about.html">О проекте</a>
+            <a class="footer__link footer__link_yandex" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a>
+        </div>
+        <div class="footer__icons">
+            <a href="https://github.com/anyathedeveloper" target="_blank"><img class="footer__icon footer__icon_git" src="<%=require('./blocks/footer/images/github.png').default%>" alt="иконка гитхаба"></a>
+            <a href="https://www.facebook.com/lije.baley.3" target="_blank"><img class="footer__icon footer__icon_facebook" src="<%=require('./blocks/footer/images/fb.png').default%>" alt="иконка фейсбука"></a>
+        </div>
+    </footer>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
+</body>

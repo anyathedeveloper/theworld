@@ -1,0 +1,17 @@
+.cards__wrapper {
+    padding: 80px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .cards__wrapper {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cards__wrapper {
+        padding: 30px 16px;
+    }
+}

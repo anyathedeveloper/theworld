@@ -1,0 +1,31 @@
+    .slider__git-button {
+        display: none;
+        margin: 30px auto;
+        padding: 15px 60px;
+        border-radius: 80px;
+        box-shadow: none;
+        border: 1px solid #1A1B22;
+        background-color: transparent;
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    @media (max-width: 650px) {
+        .slider__git-button {
+            display: block;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .slider__git-button {
+            margin: 30px 20px;
+        }
+    }
+
+    .slider__git-button:hover,
+    .slider__git-button:active {
+        background-color: #1A1B22;
+        color: #F5F6F7;
+    }

@@ -1,0 +1,22 @@
+@import url(./__bar/grid-table__bar.css);
+@import url(./__date/grid-table__date.css);
+@import url(./__day/grid-table__day.css);
+@import url(./__header/grid-table__header.css);
+@import url(./__month/grid-table__month.css);
+@import url(./__number/grid-table__number.css);
+@import url(./__percent/grid-table__percent.css);
+@import url(./__ruler/grid-table__ruler.css);
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 30px;
+    grid-row-gap: 50px;
+}
+
+@media (max-width: 400px) {
+    .grid-table {
+        grid-template-columns: 80px auto;
+        grid-row-gap: 25px;
+    }
+}

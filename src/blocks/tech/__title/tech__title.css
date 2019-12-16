@@ -1,0 +1,10 @@
+.tech__title {
+    max-width: 340px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1050px) {
+    .tech__title {
+        margin-bottom: 40px;
+    }
+}

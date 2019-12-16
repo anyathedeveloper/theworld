@@ -1,0 +1,10 @@
+.cards__button-wrapper {
+    text-align: center;
+    margin-top: 80px;
+}
+
+@media (max-width: 1000px) {
+    .cards__button-wrapper {
+        margin-top: 22px;
+    }
+}

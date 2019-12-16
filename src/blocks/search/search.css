@@ -1,0 +1,32 @@
+@import url(./__wrapper/search__wrapper.css);
+@import url(./__button/search__button.css);
+@import url(./__error/search__error.css);
+@import url(./__input/search__input.css);
+@import url(./__searchbar/search__searchbar.css);
+@import url(./__subtitle/search__subtitle.css);
+@import url(./__title/search__title.css);
+
+.search {
+    height: 580px;
+    background: url('./images/search.png') center no-repeat;
+    background-size: cover;
+    /* комментарий для проверки, задеплоилась ли обновлённая версия */
+}
+
+@media (max-width: 1000px) {
+    .search {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search {
+        height: 540px;
+    }
+}

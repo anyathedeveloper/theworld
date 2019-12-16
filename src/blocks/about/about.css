@@ -1,0 +1,30 @@
+@import url(./__photo/about__photo.css);
+@import url(./__description/about__description.css);
+@import url(./__text/about__text.css);
+@import url(./__title/about__title.css);
+
+.about {
+    display: flex;
+    padding: 80px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .about {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .about {
+        padding: 30px 16px;
+    }
+}

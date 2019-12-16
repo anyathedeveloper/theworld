@@ -1,0 +1,17 @@
+.cards__more {
+    font-size: 18px;
+    color: #1A1B22;
+    background-color: #FFFFFF;
+    border-radius: 80px;
+    padding: 16px 80px;
+    box-shadow: none;
+    border: none;
+}
+
+.cards__more:hover,
+.cards__more:focus,
+.cards__more:active {
+    background-color: #1A1B22;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}

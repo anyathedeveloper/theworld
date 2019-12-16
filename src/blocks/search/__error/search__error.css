@@ -1,0 +1,15 @@
+.search__error {
+    display: none;
+    font-size: 14px;
+    color: red;
+    line-height: 20px;
+    padding-left: 20px;
+    text-shadow: #fff 0 0 10px;
+}
+
+@media (max-width: 600px) {
+    .search__error {
+        text-align: center;
+        padding-left: 0;
+    }
+}

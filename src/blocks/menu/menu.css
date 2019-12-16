@@ -1,0 +1,24 @@
+@import url(./__logo/menu__logo.css);
+@import url(./__links/menu__links.css);
+@import url(./__link/menu__link.css);
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu {
+        padding: 0 16px;
+    }
+}

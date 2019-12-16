@@ -1,0 +1,17 @@
+.results__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 100px 80px 100px;
+}
+
+@media (max-width: 1000px) {
+    .results__wrapper {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .results__wrapper {
+        padding: 24px 16px 16px 16px;
+    }
+}

@@ -1,0 +1,9 @@
+.menu__link_white {
+    color: #fff;
+}
+
+.menu__link_white:hover {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    opacity: 1;
+}

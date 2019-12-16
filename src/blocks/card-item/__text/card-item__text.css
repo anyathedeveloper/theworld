@@ -1,0 +1,11 @@
+.card-item__text {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0 24px 10px 24px;
+}
+
+@media (max-width: 1000px) {
+    .card-item__text {
+        padding: 0 12px 10px 12px;
+    }
+}

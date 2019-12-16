@@ -1,0 +1,20 @@
+@import url(./slider__button_next/slider__button_next.css);
+@import url(./slider__button_prev/slider__button_prev.css);
+
+.slider__button:after {
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #1A1B22;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .slider__button {
+        display: none;
+    }
+}
