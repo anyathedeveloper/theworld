@@ -6,6 +6,7 @@
     padding: 16px 80px;
     box-shadow: none;
     border: none;
+    transition: 0.5s ease-in-out;
 }
 
 .cards__more:hover,
@@ -13,5 +14,4 @@
 .cards__more:active {
     background-color: #1A1B22;
     color: #fff;
-    transition: 0.5s ease-in-out;
 }

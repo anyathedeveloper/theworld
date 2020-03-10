@@ -11,13 +11,13 @@
     position: absolute;
     right: 0;
     top: 0;
+    transition: 0.5s ease-in-out;
 }
 
 .search__button:hover,
 .search__button:active {
     background: #fff;
     color: #2F71E5;
-    transition: 0.5s ease-in-out;
 }
 
 @media (max-width: 600px) {
