@@ -20,6 +20,12 @@
     color: #2F71E5;
 }
 
+.search__button:disabled,
+.search__button[disabled] {
+    background: #99ccff;
+    border: 1px solid #99ccff;
+}
+
 @media (max-width: 600px) {
     .search__button {
         width: 100%;

@@ -33,6 +33,15 @@ export class SearchInput {
         this._search = this._search.bind(this);
 
         this._form.addEventListener('submit', this._search);
+        this._form.addEventListener('input', this._validate.bind(this));
+    }
+
+    _validate(event) {
+        if (!(event.target.validity.valid)) {
+            this._input.setCustomValidity('Нужно ввести ключевое слово');
+        } else {
+            this._input.setCustomValidity('');
+        }
     }
 
     _renderStorage() {
@@ -50,6 +59,8 @@ export class SearchInput {
 
         this._container._renderLoading(true);
 
+        this._searchButton.setAttribute('disabled', 'true');
+
         const loadNews = new NewsApi(`https://newsapi.org/v2/everything?q=${this._input.value}&pageSize=100&from=${THAT_DAY}&to=${THIS_DAY}&sortBy=popularity&apiKey=${this._apiKey}`);
 
         loadNews.getNews()
@@ -64,6 +75,7 @@ export class SearchInput {
             })
             .finally(() => {
                 this._container._renderLoading(false);
+                this._searchButton.removeAttribute('disabled', 'true');
             });
     }
 

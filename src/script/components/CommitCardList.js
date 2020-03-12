@@ -21,7 +21,8 @@ export class CommitCardList {
     }
 
     _render(array) {
-        array.forEach(item => this._addSlide(item.commit.committer.name, item.commit.committer.email,
+        const firstTwenty = array.slice(0, 20);
+        firstTwenty.forEach(item => this._addSlide(item.commit.committer.name, item.commit.committer.email,
             item.commit.committer.date, item.commit.message, item.author.avatar_url));
     }
 
