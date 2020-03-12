@@ -37,7 +37,7 @@ export class SearchInput {
     }
 
     _validate(event) {
-        if (!(event.target.validity.valid)) {
+        if (event.target.validity.valueMissing) {
             this._input.setCustomValidity('Нужно ввести ключевое слово');
         } else {
             this._input.setCustomValidity('');
