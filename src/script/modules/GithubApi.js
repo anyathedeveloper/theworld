@@ -12,7 +12,7 @@ export class GithubApi {
             })
             .then(data => {
                 if (this.data === 0) {
-                    return Promise.reject(`Ошибка: ${response.statusText}`);
+                    return new Promise.reject(`Ошибка: ${response.statusText}`);
                 }
                 return data;
             })

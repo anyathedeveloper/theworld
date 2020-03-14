@@ -1,12 +1,12 @@
 import {
     NewsCard
-} from "./NewsCard.js";
+} from "../../card-item/NewsCard.js";
 
 import {
     NOTHING_FOUND,
     PRELOADER,
     CONTENT
-} from "../constants/elements.js";
+} from "../../../script/constants/elements.js";
 
 export class NewsCardList {
     constructor(container, data) {
@@ -15,7 +15,7 @@ export class NewsCardList {
         this._setItems = 3;
         this._initialItems = 0;
 
-        document.querySelector('.cards__more').onclick = () => this._render();
+        document.querySelector('.cards__more').onclick = () => this.render();
     }
 
     _addCard(source, title, publishedAt, description, urlToImage, url) {
@@ -26,7 +26,7 @@ export class NewsCardList {
     }
 
 
-    _render() {
+    render() {
 
         if (this._data.length === 0) {
             NOTHING_FOUND.classList.remove('hidden');
@@ -45,7 +45,7 @@ export class NewsCardList {
         }
     }
 
-    _renderLoading(isLoading) {
+    renderLoading(isLoading) {
         if (isLoading) {
             PRELOADER.classList.remove('hidden');
             CONTENT.classList.add('hidden');
@@ -55,7 +55,7 @@ export class NewsCardList {
         }
     }
 
-    _removeCard() {
+    removeCard() {
         while (this._container.firstChild) {
             localStorage.clear();
             this._container.removeChild(this._container.firstChild);

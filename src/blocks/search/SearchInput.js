@@ -1,25 +1,25 @@
 import {
     THAT_DAY,
     THIS_DAY
-} from "../constants/dates.js";
+} from "../../script/constants/dates.js";
 
 import {
     NOTHING_FOUND,
     NEWS_CONTAINER,
     PRELOADER
-} from "../constants/elements.js";
+} from "../../script/constants/elements.js";
 
 import {
     NewsCardList
-} from "../components/NewsCardList.js";
+} from "../cards/__wrapper/NewsCardList.js";
 
 import {
     DataStorage
-} from "../modules/DataStorage.js";
+} from "../../script/modules/DataStorage.js";
 
 import {
     NewsApi
-} from "../modules/NewsApi.js";
+} from "../../script/modules/NewsApi.js";
 
 export class SearchInput {
     constructor(form, input, container, searchButton, apiKey, dataStorage) {
@@ -44,7 +44,7 @@ export class SearchInput {
         }
     }
 
-    _renderStorage() {
+    renderStorage() {
         if (this._dataStorage.getData()) {
             this._input.value = this._dataStorage.getWord();
             const articles = this._dataStorage.getData().articles;
@@ -57,30 +57,32 @@ export class SearchInput {
 
         event.preventDefault();
 
-        this._container._renderLoading(true);
+        this._container.renderLoading(true);
 
         this._searchButton.setAttribute('disabled', 'true');
+        this._input.setAttribute('disabled', 'true');
 
         const loadNews = new NewsApi(`https://newsapi.org/v2/everything?q=${this._input.value}&pageSize=100&from=${THAT_DAY}&to=${THIS_DAY}&sortBy=popularity&apiKey=${this._apiKey}`);
 
         loadNews.getNews()
             .then(data => {
-                this._container._removeCard();
+                this._container.removeCard();
                 this._dataStorage.storeData(data);
                 this._dataStorage.storeWord(this._input.value);
                 data.articles.length > 0 ? this._showResults(this._dataStorage.getData().articles) : NOTHING_FOUND.classList.remove('hidden');
             })
-            .catch((err) => {
-                console.log(`Ошибка: ${err}`);
+            .catch((error) => {
+                alert(`Ошибка: ${error}`);
             })
             .finally(() => {
-                this._container._renderLoading(false);
+                this._container.renderLoading(false);
                 this._searchButton.removeAttribute('disabled', 'true');
+                this._input.removeAttribute('disabled', 'true');
             });
     }
 
     _showResults(data) {
-        new NewsCardList(NEWS_CONTAINER, data)._render();
+        new NewsCardList(NEWS_CONTAINER, data).render();
     }
 
 }

@@ -3,11 +3,12 @@ import '../images/favicon.ico';
 
 import {
     Statistics
-} from "../script/components/Statistics.js"; 
+} from "../blocks/results/Statistics.js";
 
 import {
     DataStorage
 } from "../script/modules/DataStorage.js";
 
+const dataStorage = new DataStorage();
 
-window.onload = () => new Statistics(new DataStorage());
+window.onload = () => new Statistics(dataStorage);

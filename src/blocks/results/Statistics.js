@@ -1,27 +1,27 @@
 import {
     DataStorage
-} from "../modules/DataStorage.js";
+} from "../../script/modules/DataStorage.js";
 
 import {
     capitalizeWord
-} from "../utils/capitalizeWord.js";
+} from "../../script/utils/capitalizeWord.js";
 
 import {
     TODAY,
     MCS_PER_DAY,
     MONTH_RUS,
     WEEK
-} from "../constants/dates.js";
+} from "../../script/constants/dates.js";
 
 import {
     INQUIRY,
-    WEEKLY_RESULTS,
-    HEADINGS,
+    WEEKLY_RESULT,
+    HEADING_RESULT,
     GRID_MONTH,
-    GRID_DAY,
+    GRID_DAYS,
     CHARTS,
-    AMOUNT_OF_NEWS
-} from "../constants/elements.js";
+    NEWS
+} from "../../script/constants/elements.js";
 
 
 export class Statistics {
@@ -42,7 +42,7 @@ export class Statistics {
         /* вы спросили + новостей за неделю */
 
         INQUIRY.textContent = '«' + capitalizeWord(word) + '»';
-        WEEKLY_RESULTS.textContent = this.dataStorage.getData().totalResults;
+        WEEKLY_RESULT.textContent = this.dataStorage.getData().totalResults;
 
         /* точные упоминания в заголовках (вкл. разный регистр) */
 
@@ -50,12 +50,13 @@ export class Statistics {
 
         const articles = this.dataStorage.getData().articles;
 
-        for (let i = 0; i < articles.length; i++) {
-            if (articles[i].title.toLowerCase().includes(word.toLowerCase())) {
+        articles.forEach(item => {
+            if (word && item.title.toLowerCase().includes(word.toLowerCase())) {
                 allTitles += 1;
+                HEADING_RESULT.textContent = allTitles;
             }
-        }
-        return HEADINGS.textContent = allTitles;
+        })
+
     }
 
     /* актуальный месяц и дни недели в чарте */
@@ -64,7 +65,7 @@ export class Statistics {
 
         GRID_MONTH.textContent = MONTH_RUS.format(TODAY); /* подставляем текущий месяц в таблицу */
 
-        let theWeek = [];
+        const theWeek = [];
 
         for (let i = WEEK; i >= 0; i--) {
             const weeknumber = new Date(new Date().getTime() - i * MCS_PER_DAY).toLocaleDateString("ru", {
@@ -78,9 +79,9 @@ export class Statistics {
             theWeek.push(currentDate);
         }
 
-        for (let i = 0; i < theWeek.length; i++) {
-            GRID_DAY[i].textContent = theWeek[i];
-        }
+        theWeek.forEach(([key, value], i) => {
+            GRID_DAYS[i].textContent = theWeek[i];
+        })
     }
 
     /* считаем кол-во упоминаний в новостях каждый день */
@@ -113,19 +114,14 @@ export class Statistics {
 
     _renderChart(data) {
 
-        const weeklyNewsAmount = Object.values(data);
-
-        for (let i = 0; i < weeklyNewsAmount.length; i++) {
-            if (weeklyNewsAmount[i] !== 0) {
-                CHARTS[i].style.width = `${weeklyNewsAmount[i]}%`;
-                AMOUNT_OF_NEWS[i].textContent = weeklyNewsAmount[i];
-            } else if (weeklyNewsAmount[i] === 0) {
-                CHARTS[i].style.width = 0;
-                AMOUNT_OF_NEWS[i].textContent = 0;
-                AMOUNT_OF_NEWS[i].style.color = '#000';
+        Object.entries(data).forEach(([key, value], i) => {
+            if (value !== 0) {
+                CHARTS[i].style.width = `${value}%`;
+                NEWS[i].textContent = value;
             } else {
-                return false;
+                NEWS[i].textContent = 0;
+                NEWS[i].style.color = '#000';
             }
-        }
+        })
     }
 }

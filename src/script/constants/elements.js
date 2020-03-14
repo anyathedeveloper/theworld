@@ -7,12 +7,12 @@ const SLIDER_CONTAINER = document.querySelector('.slider__wrapper');
 /* statistics */
 
 const INQUIRY = document.querySelector('.inquiry__asked');
-const WEEKLY_RESULTS = document.querySelector('.inquiry__news-amount');
-const HEADINGS = document.querySelector(".inquiry__references-amount");
+const WEEKLY_RESULT = document.querySelector('.inquiry__news-amount');
+const HEADING_RESULT = document.querySelector(".inquiry__references-amount");
 const GRID_MONTH = document.querySelector('.grid-table__month');
-const GRID_DAY = document.querySelectorAll('.grid-table__date');
+const GRID_DAYS = document.querySelectorAll('.grid-table__date');
 const CHARTS = document.querySelectorAll('.grid-table__bar');
-const AMOUNT_OF_NEWS = document.querySelectorAll('.grid-table__percent');
+const NEWS = document.querySelectorAll('.grid-table__percent');
 
 export {
     NOTHING_FOUND,
@@ -21,10 +21,10 @@ export {
     NEWS_CONTAINER,
     SLIDER_CONTAINER,
     INQUIRY,
-    WEEKLY_RESULTS,
-    HEADINGS,
+    WEEKLY_RESULT,
+    HEADING_RESULT,
     GRID_MONTH,
-    GRID_DAY, 
+    GRID_DAYS, 
     CHARTS, 
-    AMOUNT_OF_NEWS
+    NEWS
 };

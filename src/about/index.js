@@ -5,7 +5,7 @@ import Swiper from 'swiper';
 
 import {
     CommitCardList
-} from "../script/components/CommitCardList.js";
+} from "../blocks/slider/__container/CommitCardList.js";
 
 var mySwiper = new Swiper('.slider__container', {
     'direction': 'horizontal',
@@ -24,4 +24,8 @@ setTimeout(() => {
     mySwiper.update()
 }, 1000)
 
-window.onload = new CommitCardList()._addCommits();
+const commitList = new CommitCardList();
+
+window.onload = () => {
+    commitList.addCommits();
+}

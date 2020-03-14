@@ -8,11 +8,11 @@ import {
 
 import {
     NewsCardList
-} from "./script/components/NewsCardList.js";
+} from "./blocks/cards/__wrapper/NewsCardList.js";
 
 import {
     SearchInput
-} from "./script/components/SearchInput.js";
+} from "./blocks/search/SearchInput.js";
 
 import {
     NEWS_CONTAINER
@@ -28,4 +28,4 @@ new SearchInput(document.querySelector('.search__searchbar'),
         document.querySelector('.search__button'),
         API_KEY,
         new DataStorage())
-    ._renderStorage();
+    .renderStorage();

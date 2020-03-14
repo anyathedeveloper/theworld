@@ -1,11 +1,11 @@
 import {
     NOTHING_FOUND,
     CONTENT
-} from "../constants/elements.js";
+} from "../../script/constants/elements.js";
 
 import {
     transformDate
-} from "../utils/transformDate.js";
+} from "../../script/utils/transformDate.js";
 
 export class NewsCard {
     constructor(source, title, publishedAt, description, urlToImage, url) {

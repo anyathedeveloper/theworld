@@ -9,11 +9,11 @@ export class NewsApi {
                 if (response.ok) {
                     return Promise.resolve(response.json());
                 }
-                return new Promise.reject(console.log(response.status));
+                return new Promise.reject(`Ошибка: ${response.statusText}`);
             })
             .then(data => {
                 if (this.data === 0) {
-                    return Promise.reject(`Ошибка: ${response.statusText}`);
+                    return new Promise.reject(`Ошибка: ${response.statusText}`);
                 }
                 return data;
             })

@@ -1,6 +1,6 @@
 import {
     transformDate
-} from "../utils/transformDate.js";
+} from "../../script/utils/transformDate.js";
 
 export class CommitCard {
     constructor(name, email, date, message, avatar_url) {

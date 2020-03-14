@@ -1,23 +1,24 @@
 import {
     GithubApi
-} from "../modules/GithubApi.js";
+} from "../../../script/modules/GithubApi.js";
 
 import {
     CommitCard
-} from "./CommitCard.js";
+} from "../../slide/CommitCard.js";
 
 import {
     SLIDER_CONTAINER
-} from "../constants/elements.js";
+} from "../../../script/constants/elements.js";
 
 import {
-    GITHUB_API_KEY
-} from "../constants/apikey.js";
+    GITHUB_API_ADDRESS
+} from "../../../script/constants/apikey.js";
 
 export class CommitCardList {
     constructor(container, data) {
         this._data = data;
         this._container = container;
+
     }
 
     _render(array) {
@@ -33,8 +34,8 @@ export class CommitCardList {
         this._container.appendChild(commitElement);
     }
 
-    _addCommits() {
-        const apiCommits = new GithubApi(GITHUB_API_KEY);
+    addCommits() {
+        const apiCommits = new GithubApi(GITHUB_API_ADDRESS);
 
         apiCommits.getCommits()
             .then(data => {
@@ -44,7 +45,7 @@ export class CommitCardList {
                 new CommitCardList(SLIDER_CONTAINER)._render(data);
             })
             .catch((error) => {
-                console.log(error);
+                alert(`Ошибка: ${error}`);
             })
     }
 }
