@@ -1,3 +1,12 @@
 /node_modules
 /dist
 .DS_Store
+.idea
+.vscode
+.sublime
+.editorconfig
+.log
+jsconfig.json
+Thumbs.db
+Desktop.ini
+ehthumbs.db

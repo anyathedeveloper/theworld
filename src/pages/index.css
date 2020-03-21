@@ -11,3 +11,5 @@
 @import url(../blocks/cards/cards.css);
 @import url(../blocks/card-item/card-item.css);
 @import url(../blocks/common-text/common-text.css);
+@import url(../blocks/hidden/hidden.css);
+@import url(../blocks/disabled/disabled.css);

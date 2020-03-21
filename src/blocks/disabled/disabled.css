@@ -1,0 +1,11 @@
+.disabled {
+    background-color: #93BFFF;
+    border-color: #93BFFF;
+}
+
+.disabled:hover,
+.disabled:active {
+    background-color: #93BFFF;
+    border-color: #93BFFF;
+    color: #fff;
+}
