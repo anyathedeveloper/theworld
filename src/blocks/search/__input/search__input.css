@@ -36,7 +36,7 @@
     }
 }
 
-.search__input:invalid:not(:placeholder-shown),
+/*.search__input:invalid:not(:placeholder-shown),
 .search__input:invalid:required {
     border-color: #df4b41;
 }
@@ -44,4 +44,4 @@
 .search__input:invalid:not(:placeholder-shown) + .search__error,
 .search__input:invalid:required + .search__error {
     display: block;
-}
+} */

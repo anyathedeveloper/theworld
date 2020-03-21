@@ -15,3 +15,9 @@
         grid-gap: 8px;
     }
 }
+
+@media (min-width: 1440px) {
+    .cards__container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
