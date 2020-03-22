@@ -54,7 +54,7 @@ export class Statistics {
             if (word && item.title.toLowerCase().includes(word.toLowerCase())) {
                 allTitles += 1;
                 HEADING_RESULT.textContent = allTitles;
-            }
+            } 
         })
 
     }
