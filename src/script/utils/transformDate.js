@@ -1,5 +1,5 @@
 function transformDate(date) {
-    let d = new Date(date);
+    const d = new Date(date);
 
     return d.toLocaleDateString('ru-RU', {
             day: 'numeric',

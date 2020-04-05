@@ -20,6 +20,10 @@
     color: #2F71E5;
 }
 
+.search__button:focus {
+    outline: 0;
+}
+
 .search__button:disabled,
 .search__button[disabled] {
     background: #99ccff;

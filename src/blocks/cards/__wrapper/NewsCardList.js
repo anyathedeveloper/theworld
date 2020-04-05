@@ -34,7 +34,6 @@ export class NewsCardList {
             for (let i = this._initialItems; i < Math.min(this._initialItems + this._setItems, this._data.length); i++) {
                 const items = this._data[i];
                 this._addCard(items.source, items.title, items.publishedAt, items.description, items.urlToImage, items.url);
-
             }
 
             this._initialItems += this._setItems;
