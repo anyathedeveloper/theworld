@@ -62,7 +62,7 @@ export class SearchInput {
         this._searchButton.setAttribute('disabled', 'true');
         this._input.setAttribute('disabled', 'true');
 
-        const loadNews = new NewsApi(`https://newsapi.org/v2/everything?q=${this._input.value}&pageSize=100&from=${THAT_DAY}&to=${THIS_DAY}&sortBy=popularity&apiKey=${this._apiKey}`);
+        const loadNews = new NewsApi(`https://nomoreparties.co/news/v2/everything?q=${this._input.value}&pageSize=100&from=${THAT_DAY}&to=${THIS_DAY}&sortBy=popularity&apiKey=${this._apiKey}`);
 
         loadNews.getNews()
             .then(data => {
